@@ -39,7 +39,7 @@ If everything returns success you're set for running locally and have everything
 
 #### Deploying
 
-<Steps to get code running in production would be entered here>
+<< Steps to get code running in production would be entered here >>
 
 #### Testing
 
