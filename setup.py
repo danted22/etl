@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-"""ietl-airflow project setup."""
+"""etl project setup."""
 import os
 import sys
 import shlex
@@ -37,7 +37,7 @@ TEST_REQUIREMENTS = parse_reqs("dev_requirements.txt")
 os.environ["SLUGIFY_USES_TEXT_UNIDECODE"] = "yes"
 
 setup(
-    name="ietl-airflow",
+    name="etl",
     version="0.0.1",
     install_requires=REQUIREMENTS,
     tests_require=TEST_REQUIREMENTS,

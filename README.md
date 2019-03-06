@@ -6,7 +6,7 @@ Special thanks to [@Poogles](https://github.com/Poogles) for vetting the code an
 
 #### Notes
 
-This example assumes you have a GCP account and can set up Cloud Composer.  Ideally teraform would be used so that Cloud Composer could be set up with code.
+This example assumes you have a GCP account and can set up Cloud Composer.  Ideally teraform would be used so that Cloud Composer could be set up with code and destroyed after each use, rather than wasting your free GCP credits whilst you get this to work.
 
 Similarly the example assumes you are using Drone as your CI tool.  In the case of a new Cloud Composer instance you will need to update the CI.  This involves changing the GCS bucket location and updating the service account key in the Drone UI.
 
