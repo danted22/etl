@@ -1,0 +1,29 @@
+pipeline:
+  # Run mypy, pylava and unit tests on everything.
+  build:
+    image: python:3.6
+    commands:
+      - python setup.py develop
+      - pylava .
+      - black dags --check
+      # Composer runs everything from the dags folder, hack this onto the root.
+      - export PYTHONPATH="${PYTHONPATH}:dags"
+      - pytest --mypy -vv
+
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    username: drone
+    channel: '#data_builds'
+    on_failure: true
+
+  # Publish dags to GCS on merge to master.
+  gcs_publish:
+    image: plugins/gcs
+    source: dags
+    target: gs://europe-west1-ietl-composer--479eaf4e-bucket/
+    secrets:
+      - source: google_auth_key
+        target: GOOGLE_CREDENTIALS
+    when:
+     branch: [master]

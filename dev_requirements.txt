@@ -1,0 +1,6 @@
+pytest==4.2.1
+pytest-mypy==0.3.2
+mypy==0.670
+mypy-extensions==0.4.1
+black==18.9b0
+pylava==0.2.2
