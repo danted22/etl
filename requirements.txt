@@ -1,5 +1,5 @@
 apache-airflow>=1.10.6
 tzlocal==1.5.1   # here due to dependency conflict.  TODO: remove.
-requests==2.21.0  # here due to another build bug.  TODO: remove.
+requests==2.31.0  # here due to another build bug.  TODO: remove.
 kubernetes>=8.0.1
 virtualenv==16.2.0 # Airflow needs this.
